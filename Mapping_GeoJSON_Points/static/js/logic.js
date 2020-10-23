@@ -22,7 +22,8 @@ let sanFranAirport =
 ]};
 
 // Create the map object with center at the San Francisco airport.
-let map = L.map('mapid').setView([37.5, -122.5], 10);
+//let map = L.map('mapid').setView([37.5, -122.5], 10);
+let map = L.map('mapid').setView([30, 30], 2);
 
 // Grabbing our GeoJSON data.
 //L.geoJSON(sanFranAirport).addTo(map);
@@ -35,13 +36,13 @@ let map = L.map('mapid').setView([37.5, -122.5], 10);
   }
 }).addTo(map); */
 
-L.geoJSON(sanFranAirport, {
+/*L.geoJSON(sanFranAirport, {
   // We turn each feature into a marker on the map.
   onEachFeature: function(feature, layer) {
     console.log(layer);
      layer.bindPopup("<h3>Airport code: "+ layer.feature.properties.faa + "</h3><hr><h3>Airport name: " + layer.feature.properties.name + "</h3>");
   }
-}).addTo(map);
+}).addTo(map); */
 
 // We create the tile layer that will be the background of our map.
 let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -52,3 +53,18 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 });
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
+
+// Accessing the airport GeoJSON URL
+let airportData = "https://raw.githubusercontent.com/cedoula/Mapping_Earthquakes/Mapping_GeoJSON_Points/Mapping_GeoJSON_Points/majorAirports.json";
+
+// Grabbing our GeoJSON data.
+d3.json(airportData).then(function(data) {
+  console.log(data);
+  // Creating a GeoJSON layer with the retrieved data.
+  L.geoJson(data, {
+    onEachFeature: function(feature, layer) {
+    console.log(layer);
+    layer.bindPopup("<h3>Airport code: "+ layer.feature.properties.faa + "</h3><hr><h3>Airport name: " + layer.feature.properties.name + "</h3>");
+    }
+  }).addTo(map);
+});
