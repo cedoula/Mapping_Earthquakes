@@ -18,8 +18,8 @@ As shown below, the [index.html](https://github.com/cedoula/Mapping_Earthquakes/
     <img src="https://user-images.githubusercontent.com/68669675/97131133-54d41480-1711-11eb-8bd2-1b8539f65d2e.png"> 
 </p>
 
-The user would have to save the token key in *config.js* as: <p align="center"><img src="https://user-images.githubusercontent.com/68669675/97131416-1f7bf680-1712-11eb-8e6e-b3d93007be50.png"></p>
-The config.js file will need to be place inside *static/js/* folder.<br>
+The user would have to save the token key in *config.example.js* and rename the file *config.js*: <p align="center"><img src="https://user-images.githubusercontent.com/68669675/97131416-1f7bf680-1712-11eb-8e6e-b3d93007be50.png"></p>
+<br>
 To open the *index.html* file, open the command line, navigate to the main folder and on the command line, enter `python -m http.server`.
 
 ### Interactive Maps Views
