@@ -10,7 +10,7 @@ The earthquake data is represented on the maps in relation to the tectonic plate
 
 ## Results
 
-### Create a Mapbox account and setup config.js
+### Create a Mapbox account, setup *config.js* and open *index.html*
 To interact with the maps API the user have to visit [mapbox.com](https://www.mapbox.com/), create a Mapbox account and retrieve the access token.
 
 As shown below, the [index.html](https://github.com/cedoula/Mapping_Earthquakes/blob/main/Earthquake_Challenge/index.html) calls for the Mapbox API key in the *config.js* file. 
