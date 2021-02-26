@@ -22,6 +22,9 @@ The user would have to save the token key in *config.example.js* and rename the 
 <br>
 To open the *index.html* file, open the command line, navigate to the main folder and on the command line, enter `python -m http.server`.
 
+### Link to Interactive Maps webpage
+The deployed webpage is accessible at [https://cedoula.github.io/Mapping_Earthquakes](https://cedoula.github.io/Mapping_Earthquakes).
+
 ### Interactive Maps Views
 
 <p align="center">
